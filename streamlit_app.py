@@ -26,7 +26,10 @@ np.random.seed(42)
 
 
 
-st.title('Estimating Housing Price in Ames, Iowa')
+st.markdown("<h2 style='text-align: center; color: white;'>House Price Prediction in Ames,Iowa</h2>", unsafe_allow_html=True)
+
+st.markdown("<h3 style='text-align: center; color: white;'>A multi-step process is used to estimate the range of house prices based on your selection. The modeling process is done using the data found here (https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)</h3>", unsafe_allow_html=True)
+
 
 name_list = ['MSSubClass',
  'OverallQual',
