@@ -188,7 +188,7 @@ model2 = tf.keras.models.load_model('model_files/keras_2.h5',compile=False)
 
 yhat = model2(latent_var)
 
-col1, col2, col3 , col4, col5 = st.beta_columns(5)
+col1, col2, col3 , col4, col5 = st.columns(5)
 
 with col1:
     pass
