@@ -46,9 +46,28 @@ name_list = ['MSSubClass',
  'MoSold',
  'YrSold']
 
+name_list_train = ['MSSubClass',
+ 'OverallQual',
+ 'YearBuilt',
+ 'YearRemodAdd',
+ 'BsmtUnfSF',
+ 'TotalBsmtSF',
+ '1stFlrSF',
+ '2ndFlrSF',
+ 'GrLivArea',
+ 'FullBath',
+ 'HalfBath',
+ 'TotRmsAbvGrd',
+ 'Fireplaces',
+ 'GarageCars',
+ 'GarageArea',
+ 'MoSold',
+ 'YrSold']
+
 data = pd.read_csv('train.csv')
 
-data = np.array(data[name_list])
+
+data = data[name_list_train].values
 
 scaler.fit(data)
 
@@ -77,7 +96,6 @@ description_list = [
 
 
  ]
-
 min_list = [20.0,1.0,1872.0,
  1950.0,
  0.0,
