@@ -171,7 +171,7 @@ data_df = {
 
 negloglik = lambda y, p_y: -p_y.log_prob(y) # note this
 
-model1 = tf.keras.models.load_model('model_files/my_keras_model1.h5',custom_objects={'loss': negloglik})
+model1 = tf.keras.models.load_model('model_files/my_keras_model1.h5')
 
 model1 = tf.keras.models.Sequential(model1.layers[:5])
 
@@ -181,7 +181,7 @@ data_df_normal = scaler.transform(data_df)
 
 latent_var = model1.predict(data_df_normal)
 
-model2 = tf.keras.models.load_model('model_files/keras_2.h5')
+model2 = tf.keras.models.load_model('model_files/keras_2.h5',custom_objects={'loss': negloglik})
 
 yhat = model2(latent_var)
 
