@@ -1,3 +1,6 @@
+
+
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -26,9 +29,9 @@ np.random.seed(42)
 
 
 
-st.markdown("<h3 style='text-align: center; color: white;'>House Price Prediction in Ames,Iowa</h3>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: white;'>House Price Prediction in Ames,Iowa</h4>", unsafe_allow_html=True)
 
-st.markdown("<h4 style='text-align: center; color: white;'>A multi-step process is used to estimate the range of house prices based on your selection. The modeling process is done using the data found here (https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)</h4>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: white;'>A multi-step process is used to estimate the range of house prices based on your selection. The modeling process is done using the data found here (https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)</h5>", unsafe_allow_html=True)
 
 
 name_list = ['MSSubClass',
@@ -188,47 +191,36 @@ model2 = tf.keras.models.load_model('model_files/keras_2.h5',compile=False)
 
 yhat = model2(latent_var)
 
-col1, col2, col3 , col4, col5 = st.columns(5)
-
-with col1:
-    pass
-with col2:
-    pass
-with col4:
-    pass
-with col5:
-    pass
-with col3 :
 
 
-    if st.button('Calculate range of house price'):
+if st.button('Calculate range of house price'):
 
-        import time
+    import time
 
-        #my_bar = st.progress(0)
+    #my_bar = st.progress(0)
 
-        with st.spinner('Calculating....'):
-            time.sleep(2)
+    with st.spinner('Calculating....'):
+        time.sleep(2)
 
 
 
-        st.subheader('The Price of Your desired house will be between ')
+    st.subheader('The Price of Your desired house will be between ')
 
-        col1, col2 = st.columns([3, 3])
+    col1, col2 = st.columns([3, 3])
 
-        lower_number = "{:,.2f}".format(int(yhat.mean().numpy()-1.95*yhat.stddev().numpy()))
-        higher_number = "{:,.2f}".format(int(yhat.mean().numpy()+1.95*yhat.stddev().numpy()))
+    lower_number = "{:,.2f}".format(int(yhat.mean().numpy()-1.95*yhat.stddev().numpy()))
+    higher_number = "{:,.2f}".format(int(yhat.mean().numpy()+1.95*yhat.stddev().numpy()))
 
-        col1, col2, col3 = st.columns([1,6,1])
+    col1, col2, col3 = st.columns([1,6,1])
 
-        with col1:
-            st.write("")
+    with col1:
+        st.write("")
 
-        with col2:
-            st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
+    with col2:
+        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
 
-        with col3:
-            st.write("")
+    with col3:
+        st.write("")
 
     
 
@@ -247,4 +239,5 @@ with col3 :
 
 
 
+    
 
