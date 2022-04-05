@@ -205,9 +205,16 @@ if st.button('Calculate range of house price'):
     lower_number = "{:,.2f}".format(int(yhat.mean().numpy()-1.95*yhat.stddev().numpy()))
     higher_number = "{:,.2f}".format(int(yhat.mean().numpy()+1.95*yhat.stddev().numpy()))
 
-    col1.subheader("USD "+ str(lower_number))
+    col1, col2, col3 = st.columns([1,6,1])
 
-    col2.subheader("USD "+str(higher_number))
+    with col1:
+        st.write("")
+
+    with col2:
+        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
+
+    with col3:
+        st.write("")
 
     
 
