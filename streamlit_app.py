@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 
+from sklearn.preprocessing import MinMaxScaler
+
 import tensorflow_probability as tfp
 tfd = tfp.distributions
 
@@ -11,7 +13,9 @@ from pickle import load
 
 # dump(scaler, open('scaler.pkl', 'wb'))
 
-scaler = load(open('scaler.pkl', 'rb'))
+#scaler = load(open('scaler.pkl', 'rb'))
+
+scaler = MinMaxScaler()
 
 
 
@@ -41,6 +45,12 @@ name_list = ['MSSubClass',
  'GarageArea',
  'MoSold',
  'YrSold']
+
+data = pd.read_csv('train.csv')
+
+data = np.array(data[name_list])
+
+scaler.fit(data)
 
 description_list = [
  'What is the building class?',
