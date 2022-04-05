@@ -171,7 +171,7 @@ data_df = {
 
 negloglik = lambda y, p_y: -p_y.log_prob(y) # note this
 
-model1 = tf.keras.models.load_model('model_files/my_keras_model1.h5',custom_objects={'negloglik': negloglik})
+model1 = tf.keras.models.load_model('model_files/my_keras_model1.h5',custom_objects={'loss': negloglik})
 
 model1 = tf.keras.models.Sequential(model1.layers[:5])
 
