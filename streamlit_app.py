@@ -231,26 +231,24 @@ if center_button:
     lower_number = "{:,.2f}".format(int(yhat.mean().numpy()-1.95*yhat.stddev().numpy()))
     higher_number = "{:,.2f}".format(int(yhat.mean().numpy()+1.95*yhat.stddev().numpy()))
 
-    col1, col2, col3,col4,col5 = st.columns(5)
+    col1, col2, col3 = st.columns(3)
+
+    
 
     with col1:
         st.write("")
 
     with col2:
-        st.write("")
-
-    with col3:
-        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
+        st.subheader("USD "+ str(lower_number))
         st.subheader("  AND ")
 
         st.subheader(" USD "+str(higher_number))
 
 
-    with col4:
+    with col3:
         st.write("")
 
-    with col5:
-        st.write("")
+    
 
     
 
