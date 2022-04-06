@@ -198,7 +198,22 @@ yhat = model2(latent_var)
 
 
 
-if st.button('Calculate range of house price'):
+col1, col2, col3 , col4, col5 = st.beta_columns(5)
+
+with col1:
+    pass
+with col2:
+    pass
+with col4:
+    pass
+with col5:
+    pass
+with col3 :
+    center_button = st.button('Calculate range of house price')
+
+
+
+if center_button:
 
     import time
 
