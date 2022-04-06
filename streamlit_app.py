@@ -35,7 +35,7 @@ st.markdown("<h4 style='text-align: center; color: #1B9E91;'>House Price Predict
 
 st.markdown("<h5 style='text-align: center; color: #1B9E91;'>A multi-step process is used to estimate the range of house prices based on your selection. The modeling process is done using the data found below</h5>", unsafe_allow_html=True)
 
-st.write("Kaggle Link to Data Set [link](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)")
+st.write("[Kaggle Link to Data Set](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)")
 
 name_list = ['MSSubClass',
  'OverallQual',
