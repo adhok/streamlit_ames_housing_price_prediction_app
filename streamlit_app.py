@@ -240,12 +240,13 @@ if center_button:
         st.write("")
 
     with col3:
-        st.write("")
+        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
+
     with col4:
         st.write("")
 
     with col5:
-        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
+        st.write("")
 
     
 
