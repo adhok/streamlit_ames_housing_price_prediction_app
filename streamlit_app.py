@@ -198,7 +198,7 @@ yhat = model2(latent_var)
 
 
 
-col1, col2, col3 , col4, col5 = st.beta_columns(5)
+col1, col2, col3 , col4, col5 = st.columns(5)
 
 with col1:
     pass
@@ -231,16 +231,21 @@ if center_button:
     lower_number = "{:,.2f}".format(int(yhat.mean().numpy()-1.95*yhat.stddev().numpy()))
     higher_number = "{:,.2f}".format(int(yhat.mean().numpy()+1.95*yhat.stddev().numpy()))
 
-    col1, col2, col3 = st.columns([1,6,1])
+    col1, col2, col3,col4,col5 = st.columns([5])
 
     with col1:
         st.write("")
 
     with col2:
-        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
+        st.write("")
 
     with col3:
         st.write("")
+    with col4:
+        st.write("")
+
+    with col5:
+        st.subheader("USD "+ str(lower_number)+"  AND "+" USD "+str(higher_number))
 
     
 
