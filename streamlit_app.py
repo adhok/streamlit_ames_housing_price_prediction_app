@@ -231,7 +231,7 @@ if center_button:
     lower_number = "{:,.2f}".format(int(yhat.mean().numpy()-1.95*yhat.stddev().numpy()))
     higher_number = "{:,.2f}".format(int(yhat.mean().numpy()+1.95*yhat.stddev().numpy()))
 
-    col1, col2, col3,col4,col5 = st.columns([5])
+    col1, col2, col3,col4,col5 = st.columns(5)
 
     with col1:
         st.write("")
