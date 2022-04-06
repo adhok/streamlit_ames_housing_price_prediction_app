@@ -224,7 +224,7 @@ if center_button:
 
 
 
-    st.markdown("<h5 style='text-align: center; color: #1B9E91;'>The price range of your is between:</h5>", unsafe_allow_html=True)
+    st.markdown("<h5 style='text-align: center; color: #1B9E91;'>The price range of your house is between:</h5>", unsafe_allow_html=True)
 
 
     col1, col2 = st.columns([3, 3])
