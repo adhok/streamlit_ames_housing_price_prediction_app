@@ -241,7 +241,7 @@ if center_button:
 
     with col2:
         st.subheader("USD "+ str(lower_number))
-        st.subheader("  AND ")
+        st.subheader("       AND ")
 
         st.subheader(" USD "+str(higher_number))
 
