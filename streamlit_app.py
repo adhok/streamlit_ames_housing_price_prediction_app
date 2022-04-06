@@ -148,6 +148,9 @@ with st.sidebar:
 
         variable_name = name_list[i]
         globals()[variable_name] = st.slider(description_list[i] ,min_value=int(min_list[i]), max_value =int(max_list[i]),step=1)
+      
+    st.write("[Kaggle Link to Data Set](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)")
+
     
 
 
@@ -240,7 +243,6 @@ if st.button('Calculate range of house price'):
     
 
 
-st.write("[Kaggle Link to Data Set](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)")
 
     
 
