@@ -33,7 +33,7 @@ st.markdown("<body style ='color:#E2E0D9;'></body>", unsafe_allow_html=True)
 
 st.markdown("<h4 style='text-align: center; color: #1B9E91;'>House Price Prediction in Ames,Iowa</h4>", unsafe_allow_html=True)
 
-st.markdown("<h5 style='text-align: center; color: #1B9E91;'>A multi-step process is used to estimate the range of house prices based on your selection. The modeling process is done using the data found at the bottom of the page.</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: #1B9E91;'>A multi-step process is used to estimate the range of house prices based on your selection. The modeling process is done using the data found on Kaggle(link at left bottom corner of page)</h5>", unsafe_allow_html=True)
 
 
 name_list = ['MSSubClass',
