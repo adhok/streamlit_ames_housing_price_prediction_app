@@ -224,7 +224,8 @@ if center_button:
 
 
 
-    st.subheader('The Price of Your desired house will be between ')
+    st.markdown("<h5 style='text-align: center; color: #1B9E91;'>The price range of your is between:</h5>", unsafe_allow_html=True)
+
 
     col1, col2 = st.columns([3, 3])
 
