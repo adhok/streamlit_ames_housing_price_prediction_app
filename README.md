@@ -9,4 +9,4 @@ This is a streamlit app created by using the Ames Housing dataset on Kaggle (htt
 
 * The second step is to predict the 95% confidence intervals of prices of houses. This step uses the tensorflow probability library.
 
-Useful criticism and feedback is welcome!
+Useful criticism and feedback is welcome! You can email me at padhokshaja@gmail.com
