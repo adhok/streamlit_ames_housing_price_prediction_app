@@ -192,7 +192,7 @@ data_df_normal = scaler.transform(data_df)
 
 latent_var = model1.predict(data_df_normal)
 
-model2 = tf.keras.models.load_model('model_files/keras_2.h5',compile=False)
+model2 = tf.keras.models.load_model('model_files/keras_2.h5',compile=True)
 
 yhat = model2(latent_var)
 
